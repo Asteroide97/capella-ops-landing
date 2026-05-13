@@ -19,7 +19,7 @@ export function CTASection() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <ButtonLink href="/demo">Solicitar demo</ButtonLink>
+              <ButtonLink href="/demo">Cotizar expansión</ButtonLink>
               <ButtonLink href="/planes" variant="secondary">
                 Ver planes
               </ButtonLink>

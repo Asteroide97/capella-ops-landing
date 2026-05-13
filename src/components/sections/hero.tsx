@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section className="overflow-hidden pt-8 pb-10 sm:pt-10 sm:pb-12 lg:pt-12 lg:pb-10 xl:pt-14 xl:pb-12">
       <Container>
-        <div className="grid gap-8 lg:grid-cols-[minmax(380px,0.95fr)_minmax(520px,1.05fr)] lg:items-start lg:gap-10 xl:gap-12">
+        <div className="grid gap-8 lg:grid-cols-[minmax(380px,0.95fr)_minmax(540px,1.05fr)] lg:items-start lg:gap-10 xl:gap-12">
           <div className="space-y-6 lg:max-w-[39rem] lg:space-y-7">
             <div className="space-y-4">
               <span className="eyebrow">Command center para negocios</span>
@@ -56,7 +56,7 @@ export function Hero() {
           </div>
 
           <div className="lg:justify-self-end lg:max-h-[720px] lg:overflow-hidden lg:pt-1 xl:max-h-[760px]">
-            <div className="origin-top lg:scale-[0.92] xl:scale-[0.96] 2xl:scale-100">
+            <div className="origin-top lg:scale-[0.97] xl:scale-100">
               <ProductMockup />
             </div>
           </div>
