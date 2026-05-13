@@ -10,22 +10,20 @@ const heroHighlights = [
 
 export function Hero() {
   return (
-    <section className="overflow-hidden pt-10 pb-12 sm:pt-12 sm:pb-16 lg:pt-14 lg:pb-16 xl:pt-16 xl:pb-20">
+    <section className="overflow-hidden pt-8 pb-10 sm:pt-10 sm:pb-12 lg:pt-12 lg:pb-10 xl:pt-14 xl:pb-12">
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[minmax(360px,0.95fr)_minmax(560px,1.05fr)] lg:items-start lg:gap-12 xl:gap-14">
-          <div className="space-y-7 lg:max-w-[40rem] lg:space-y-8">
-            <div className="space-y-5">
+        <div className="grid gap-8 lg:grid-cols-[minmax(380px,0.95fr)_minmax(520px,1.05fr)] lg:items-start lg:gap-10 xl:gap-12">
+          <div className="space-y-6 lg:max-w-[39rem] lg:space-y-7">
+            <div className="space-y-4">
               <span className="eyebrow">Command center para negocios</span>
-              <div className="space-y-5">
-                <p className="text-sm font-semibold uppercase tracking-[0.32em] text-green-700">Capella Ops</p>
-                <h1 className="text-balance max-w-3xl text-5xl font-semibold tracking-[-0.06em] text-ink sm:text-6xl lg:text-[4.35rem] lg:leading-[0.95] xl:text-[4.6rem]">
-                  El sistema operativo para controlar inventario, ventas y operaciones
-                </h1>
-                <p className="max-w-2xl text-balance text-lg leading-8 text-slate-700 sm:text-xl">
-                  Unifica inventario, POS, clientes, compras, proyectos y reportes en una sola plataforma diseñada
-                  para negocios que necesitan orden, visibilidad y control.
-                </p>
-              </div>
+              <p className="text-sm font-semibold uppercase tracking-[0.32em] text-green-700">Capella Ops</p>
+              <h1 className="text-balance max-w-3xl text-5xl font-semibold tracking-[-0.06em] text-ink sm:text-6xl lg:text-[4rem] lg:leading-[0.96] xl:text-[4.35rem]">
+                El sistema operativo para controlar inventario, ventas y operaciones
+              </h1>
+              <p className="max-w-2xl text-balance text-lg leading-8 text-slate-700 sm:text-xl">
+                Unifica inventario, POS, clientes, compras, proyectos y reportes en una sola plataforma diseñada para
+                negocios que necesitan orden, visibilidad y control.
+              </p>
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -44,9 +42,12 @@ export function Hero() {
               </ButtonLink>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-3 lg:gap-3 xl:gap-4">
+            <div className="grid gap-4 sm:grid-cols-3 lg:gap-3">
               {heroHighlights.map(([title, detail]) => (
-                <div key={title} className="rounded-[24px] border border-[color:var(--line)] bg-white/70 p-4 backdrop-blur">
+                <div
+                  key={title}
+                  className="rounded-[24px] border border-[color:var(--line)] bg-white/70 p-4 backdrop-blur"
+                >
                   <p className="text-sm font-semibold text-ink">{title}</p>
                   <p className="mt-2 text-sm leading-6 text-slate-600">{detail}</p>
                 </div>
@@ -54,8 +55,8 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="lg:justify-self-end lg:pt-1 xl:pt-2">
-            <div className="origin-top lg:scale-[0.95] xl:scale-[0.98] 2xl:scale-100">
+          <div className="lg:justify-self-end lg:max-h-[720px] lg:overflow-hidden lg:pt-1 xl:max-h-[760px]">
+            <div className="origin-top lg:scale-[0.92] xl:scale-[0.96] 2xl:scale-100">
               <ProductMockup />
             </div>
           </div>
