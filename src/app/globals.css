@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f4f8f4;
+  --surface: #ffffff;
+  --surface-soft: rgba(255, 255, 255, 0.72);
+  --foreground: #0d1b13;
+  --muted: #57675f;
+  --muted-soft: #708077;
+  --line: rgba(17, 63, 44, 0.13);
+  --line-strong: rgba(17, 63, 44, 0.2);
+  --primary: #1b8a5a;
+  --primary-dark: #113f2c;
+  --primary-soft: #dceee1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(27, 138, 90, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(17, 63, 44, 0.1), transparent 24%),
+    linear-gradient(180deg, #f8fbf8 0%, #f2f7f2 46%, #eef4ef 100%);
+  color: var(--foreground);
+}
+
+::selection {
+  background: rgba(27, 138, 90, 0.18);
+  color: var(--foreground);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body), sans-serif;
+    @apply antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display), sans-serif;
+    @apply font-semibold tracking-[-0.03em] text-ink;
+  }
+
+  p {
+    @apply text-[15px] leading-7 text-slate-700 sm:text-base;
+  }
+}
+
+@layer components {
+  .site-frame {
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-[color:var(--line-strong)] bg-white/80 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-green-800 backdrop-blur;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply h-2 w-2 rounded-full bg-green-500;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-green-700 px-5 py-3 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-green-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-[color:var(--line-strong)] bg-white/90 px-5 py-3 text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:border-green-700 hover:text-green-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700;
+  }
+
+  .button-ghost {
+    @apply inline-flex items-center justify-center rounded-full px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:text-green-800;
+  }
+
+  .surface-panel {
+    @apply rounded-[28px] border border-[color:var(--line)] bg-[color:var(--surface-soft)] shadow-panel backdrop-blur;
+  }
+
+  .control-card {
+    @apply rounded-[24px] border border-[color:var(--line)] bg-white shadow-float;
+  }
+
+  .grid-shell {
+    background-image: linear-gradient(to right, rgba(17, 63, 44, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(17, 63, 44, 0.06) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
