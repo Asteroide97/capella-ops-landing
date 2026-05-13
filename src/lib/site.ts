@@ -74,14 +74,12 @@ export const pricingPlans = [
     monthlyPrice: 299,
     highlighted: false,
     includedUsers: "Hasta 2 usuarios incluidos",
-    extraUsers: "Ideal para operaciones pequeñas y control inicial.",
-    description: "La base para ordenar inventario y operación diaria sin cargar al equipo con complejidad innecesaria.",
+    extraUsers: "Productos y ventas ilimitados",
+    description: "La base para ordenar inventario y operación diaria con cobertura comercial esencial.",
     features: [
-      "Inventario",
-      "Alertas de stock",
-      "Kardex y movimientos",
-      "Reportes básicos",
-      "Soporte estándar"
+      "Hasta 2 usuarios incluidos",
+      "Productos y ventas ilimitados",
+      "20 facturas al mes"
     ]
   },
   {
@@ -89,15 +87,14 @@ export const pricingPlans = [
     monthlyPrice: 499,
     highlighted: true,
     includedUsers: "3 usuarios incluidos",
-    extraUsers: "Usuarios adicionales disponibles con costo adicional.",
-    description: "El plan comercial más balanceado para negocios que ya operan ventas, compras y seguimiento diario.",
+    extraUsers: "Usuarios adicionales disponibles con costo adicional",
+    description:
+      "El plan comercial más balanceado para operaciones que ya necesitan más usuarios y mayor capacidad de facturación.",
     features: [
-      "Todo lo del Básico",
-      "POS y ventas",
-      "Clientes",
-      "Compras",
-      "Facturación cuando esté habilitada comercialmente",
-      "Reportes operativos"
+      "3 usuarios incluidos",
+      "Usuarios adicionales disponibles con costo adicional",
+      "Productos y ventas ilimitados",
+      "50 facturas al mes"
     ]
   },
   {
@@ -105,16 +102,13 @@ export const pricingPlans = [
     monthlyPrice: 799,
     highlighted: false,
     includedUsers: "4 usuarios incluidos",
-    extraUsers: "Usuarios adicionales disponibles con costo adicional.",
-    description: "La capa completa para equipos que necesitan coordinar operación, clientes, proyectos y cobranza.",
+    extraUsers: "Usuarios adicionales disponibles con costo adicional",
+    description: "La capa completa para equipos que necesitan crecer sin límite práctico en facturación mensual.",
     features: [
-      "Todo lo del Pro",
-      "CRM",
-      "Gestión de proyectos",
-      "Cobranza",
-      "Cuentas por pagar",
-      "Automatizaciones operativas",
-      "Reportes avanzados"
+      "4 usuarios incluidos",
+      "Usuarios adicionales disponibles con costo adicional",
+      "Productos y ventas ilimitados",
+      "Facturas ilimitadas"
     ]
   }
 ] as const;

@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     "Consulta los planes Básico, Pro y Total de Capella Ops, con usuarios incluidos, módulos comerciales y descuento anual derivado del precio mensual."
 };
 
+function formatMoney(value: number) {
+  return new Intl.NumberFormat("es-MX", {
+    style: "currency",
+    currency: "MXN",
+    maximumFractionDigits: 0
+  }).format(value);
+}
+
 export default function PlansPage() {
   return (
     <>
@@ -33,8 +41,16 @@ export default function PlansPage() {
               {pricingPlans.map((plan) => (
                 <div key={plan.name} className="rounded-[22px] border border-[color:var(--line)] bg-white/85 p-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-green-700">Plan {plan.name}</p>
-                  <p className="mt-3 text-base font-semibold text-ink">{plan.includedUsers}</p>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">{plan.extraUsers}</p>
+                  <p className="mt-3 text-2xl font-semibold text-ink">{formatMoney(plan.monthlyPrice)}</p>
+                  <p className="mt-1 text-sm text-slate-500">/ mes</p>
+                  <ul className="mt-4 space-y-2 text-sm leading-6 text-slate-600">
+                    {plan.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-green-600" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
