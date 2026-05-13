@@ -4,12 +4,12 @@ import { ProductMockup } from "@/components/marketing/product-mockup";
 
 export function Hero() {
   return (
-    <section className="section-space overflow-hidden pb-12 sm:pb-20">
-      <Container className="space-y-14">
-        <div className="grid items-end gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
-          <div className="space-y-8">
+    <section className="overflow-hidden pt-8 pb-12 sm:pt-12 sm:pb-20 lg:flex lg:min-h-[calc(100vh-88px)] lg:items-center lg:py-10 xl:py-12">
+      <Container className="w-full">
+        <div className="grid items-start gap-10 lg:grid-cols-[minmax(360px,0.9fr)_minmax(560px,1.1fr)] lg:items-center lg:gap-12 xl:gap-14">
+          <div className="space-y-7 lg:space-y-8">
             <span className="eyebrow">Command center para negocios</span>
-            <div className="space-y-6">
+            <div className="space-y-5 lg:space-y-6">
               <p className="text-sm font-semibold uppercase tracking-[0.32em] text-green-700">Capella Ops</p>
               <h1 className="text-balance max-w-3xl text-5xl font-semibold tracking-[-0.06em] text-ink sm:text-6xl lg:text-[4.7rem] lg:leading-[0.95]">
                 El sistema operativo para controlar inventario, ventas y operaciones
@@ -36,7 +36,7 @@ export function Hero() {
               </ButtonLink>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-3 lg:gap-3 xl:gap-4">
               {[
                 ["Operación unificada", "Inventario, ventas y seguimiento en el mismo flujo."],
                 ["Listo para crecer", "Módulos configurables según el ritmo del negocio."],
