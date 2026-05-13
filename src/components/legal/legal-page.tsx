@@ -13,7 +13,7 @@ type LegalPageProps = {
   description: string;
   children: ReactNode;
   lastUpdated?: string;
-  tableOfContents?: LegalSectionLink[];
+  tableOfContents?: readonly LegalSectionLink[];
 };
 
 export function LegalPage({
@@ -31,7 +31,9 @@ export function LegalPage({
       <Container className="space-y-10">
         <div className="max-w-4xl space-y-5">
           <span className="eyebrow">{eyebrow}</span>
-          <h1 className="text-balance text-5xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl">{title}</h1>
+          <h1 className="text-balance text-5xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl">
+            {title}
+          </h1>
           <p className="max-w-3xl text-balance text-lg leading-8 text-slate-700">{description}</p>
           {lastUpdated ? (
             <div className="inline-flex items-center rounded-full border border-[color:var(--line)] bg-white/80 px-4 py-2 text-sm font-medium text-slate-600">
