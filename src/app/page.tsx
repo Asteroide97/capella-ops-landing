@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 
 import { CTASection } from "@/components/sections/cta-section";
-import { FlowSection } from "@/components/sections/flow-section";
 import { Hero } from "@/components/sections/hero";
-import { ModulesSection } from "@/components/sections/modules-section";
-import { PricingSection } from "@/components/sections/pricing-section";
 import { ProblemSection } from "@/components/sections/problem-section";
 import { SolutionSection } from "@/components/sections/solution-section";
 
@@ -20,9 +17,6 @@ export default function HomePage() {
       <Hero />
       <ProblemSection />
       <SolutionSection />
-      <ModulesSection />
-      <FlowSection />
-      <PricingSection embedded />
       <CTASection />
     </>
   );
