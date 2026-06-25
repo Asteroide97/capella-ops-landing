@@ -85,7 +85,7 @@ export default function DistributorsPage() {
             <div className="grid gap-4 md:grid-cols-2">
               <div className="rounded-[24px] bg-pine p-5 text-white">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-green-100/80">Comisión sugerida</p>
-                <p className="mt-3 text-4xl font-semibold tracking-[-0.05em]">30%</p>
+                <p className="mt-3 text-4xl font-semibold tracking-[-0.05em] text-white">30%</p>
                 <p className="mt-3 text-sm leading-7 text-green-100/80">
                   Sobre la mensualidad del cliente durante los primeros 12 meses como referencia comercial editable.
                 </p>
