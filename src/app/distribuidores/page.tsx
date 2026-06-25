@@ -41,63 +41,6 @@ const modulesForPartners = [
   "Reportes"
 ];
 
-const partnerProfiles = [
-  "Consultores empresariales",
-  "Agencias digitales",
-  "Implementadores de software",
-  "Despachos contables y administrativos",
-  "Revendedores de tecnología",
-  "Especialistas en operaciones"
-];
-
-const partnerAssets = [
-  "Cuenta demo",
-  "Material comercial",
-  "Capacitación inicial",
-  "Acompañamiento en primeras ventas",
-  "Soporte para implementación",
-  "Posibilidad de vender servicios adicionales"
-];
-
-const sellReasons = [
-  "Es un producto B2B con cobro recurrente.",
-  "Resuelve problemas reales de inventario, ventas y operación.",
-  "Puede venderse a negocios con procesos internos y puntos de fricción claros.",
-  "Deja espacio para servicios complementarios de implementación, consultoría, capacitación y soporte.",
-  "Permite construir relaciones más largas con clientes que necesitan acompañamiento continuo."
-];
-
-const faqItems = [
-  {
-    question: "¿Necesito invertir dinero?",
-    answer: "No para iniciar. El programa puede comenzar sin compra de licencias, sujeto a aprobación comercial."
-  },
-  {
-    question: "¿Cuánto puedo ganar?",
-    answer: "Depende del plan, del número de clientes y del convenio. La referencia comercial sugerida es 30%."
-  },
-  {
-    question: "¿Mis clientes reciben soporte?",
-    answer: "Sí. Capella Ops puede acompañar la operación y el distribuidor también puede ofrecer servicios adicionales."
-  },
-  {
-    question: "¿Puedo vender implementación o consultoría?",
-    answer: "Sí. Puedes agregar servicios propios alrededor del software según tu modelo de negocio."
-  },
-  {
-    question: "¿Dónde puedo vender Capella Ops?",
-    answer: "Principalmente en México al inicio, con posibilidad de expansión según el programa y el partner."
-  },
-  {
-    question: "¿Qué tipo de negocios son ideales?",
-    answer: "Negocios con inventario, ventas, compras, clientes, cobranza o proyectos que necesiten más control."
-  },
-  {
-    question: "¿La facturación ya está incluida?",
-    answer: "Se presenta como módulo configurable o sujeto a habilitación según disponibilidad comercial y contexto fiscal."
-  }
-];
-
 export const metadata: Metadata = {
   title: "Distribuidores",
   description:
@@ -178,8 +121,8 @@ export default function DistributorsPage() {
         <Container className="space-y-10">
           <SectionHeading
             eyebrow="Ingresos estimados"
-            title="Una estructura comercial simple para visualizar recurrencia desde el inicio."
-            description="No necesitas un configurador complejo para entender el modelo. Puedes usar esta calculadora visual como referencia comercial editable."
+            title="¿Cuánto puedes ganar?"
+            description="La referencia comercial es simple: comisión sugerida de 30% y un ingreso recurrente ligado a clientes activos."
             align="center"
           />
           <DistributorCalculator />
@@ -190,8 +133,8 @@ export default function DistributorsPage() {
         <Container className="space-y-10">
           <SectionHeading
             eyebrow="Cómo funciona"
-            title="Tres pasos para entrar al programa y empezar a mover oportunidades."
-            description="La estructura busca que el partner tenga claridad comercial, acompañamiento inicial y una ruta directa para empezar a vender."
+            title="Tres pasos para entrar al programa y empezar a vender."
+            description="El flujo comercial está pensado para ser corto: registro, presentación y comisión por clientes activos."
             align="center"
           />
           <div className="grid gap-5 xl:grid-cols-3">
@@ -210,8 +153,8 @@ export default function DistributorsPage() {
         <Container className="grid gap-10 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)]">
           <SectionHeading
             eyebrow="Qué vendes"
-            title="Una plataforma comercializable por módulos, con problemas concretos que resolver."
-            description="Capella Ops se puede presentar como sistema operativo para negocios que ya sienten fricción en inventario, ventas, clientes, compras y coordinación."
+            title="Una plataforma comercializable con módulos claros y casos de uso directos."
+            description="Capella Ops se presenta como una solución operativa para negocios que necesitan más control en inventario, ventas, clientes y ejecución."
           />
 
           <div className="surface-panel p-6 sm:p-8">
@@ -230,106 +173,16 @@ export default function DistributorsPage() {
       </section>
 
       <section className="section-space pt-0">
-        <Container className="space-y-10">
-          <SectionHeading
-            eyebrow="Para quién es"
-            title="Partners que ya tienen relación con negocios y quieren sumar una capa SaaS vendible."
-            description="La mejor afinidad aparece cuando el partner ya entiende procesos, implementación o dolor operativo en empresas con crecimiento."
-            align="center"
-          />
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {partnerProfiles.map((profile) => (
-              <article key={profile} className="control-card rounded-[24px] p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-green-700">Perfil ideal</p>
-                <h2 className="mt-4 text-2xl">{profile}</h2>
-                <p className="mt-3 text-sm leading-7 text-slate-600">
-                  Puede integrar Capella Ops a una conversación de mejora operativa y digitalización real.
-                </p>
-              </article>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="section-space pt-0">
-        <Container className="grid gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
-          <SectionHeading
-            eyebrow="Lo que recibirás"
-            title="Herramientas para vender mejor y entrar con más seguridad a las primeras cuentas."
-            description="El objetivo no es solo dar acceso al programa, sino ayudarte a aterrizar el producto comercialmente y ejecutar mejor tus primeras oportunidades."
-          />
-          <div className="surface-panel p-6 sm:p-8">
-            <div className="grid gap-4 sm:grid-cols-2">
-              {partnerAssets.map((asset) => (
-                <div key={asset} className="flex items-start gap-3 rounded-[22px] border border-[color:var(--line)] bg-white/85 px-4 py-4">
-                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-green-600" />
-                  <p className="text-sm leading-7 text-slate-700">{asset}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="section-space pt-0">
-        <Container>
-          <div className="surface-panel overflow-hidden bg-pine p-8 text-white sm:p-10 lg:p-12">
-            <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-              <div className="space-y-4">
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-green-100/80">
-                  Por qué vender Capella Ops
-                </span>
-                <h2 className="text-balance text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
-                  Un producto B2B con recurrencia, casos reales y espacio para servicios de alto valor.
-                </h2>
-                <p className="max-w-2xl text-lg leading-8 text-green-100/80">
-                  La propuesta no depende de modas ni de un solo caso de uso: habla con negocios que ya necesitan más
-                  visibilidad y más control sobre su operación.
-                </p>
-              </div>
-
-              <div className="space-y-4">
-                {sellReasons.map((reason) => (
-                  <div key={reason} className="rounded-[22px] border border-white/10 bg-white/5 px-4 py-4">
-                    <p className="text-sm leading-7 text-green-50">{reason}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="section-space pt-0">
-        <Container className="space-y-10">
-          <SectionHeading
-            eyebrow="FAQ"
-            title="Preguntas frecuentes del programa de distribuidores."
-            description="La idea es dejar una base clara desde la landing para reducir fricción comercial antes del primer contacto."
-            align="center"
-          />
-          <div className="grid gap-5 lg:grid-cols-2">
-            {faqItems.map((item) => (
-              <article key={item.question} className="control-card rounded-[24px] p-6">
-                <h2 className="text-xl">{item.question}</h2>
-                <p className="mt-3 text-sm leading-7 text-slate-600">{item.answer}</p>
-              </article>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="section-space pt-0">
         <Container>
           <div className="surface-panel p-8 sm:p-10 lg:p-12">
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_auto] lg:items-end">
               <div className="space-y-4">
                 <span className="eyebrow">Siguiente paso</span>
                 <h2 className="text-balance text-4xl font-semibold tracking-[-0.05em] text-ink sm:text-5xl">
-                  Si ya atiendes negocios con problemas operativos, puedes sumar una solución SaaS sin construirla desde cero.
+                  Si ya hablas con negocios que necesitan más control, puedes sumar Capella Ops a tu oferta comercial.
                 </h2>
                 <p className="max-w-2xl text-lg leading-8 text-slate-700">
-                  Conversemos sobre tu mercado, tu forma de vender y el tipo de convenio que hace sentido para empezar.
+                  Conversemos sobre tu mercado y el tipo de convenio comercial con el que tendría sentido empezar.
                 </p>
               </div>
 
