@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { legalLinks, portalUrl, secondaryNavigationLinks } from "@/lib/site";
+import { legalLinks, navigationLinks, portalUrl, secondaryNavigationLinks } from "@/lib/site";
 import { Container } from "@/components/ui/container";
 
 export function Footer() {
@@ -25,12 +25,11 @@ export function Footer() {
               <Link href="/" className="block hover:text-green-800">
                 Inicio
               </Link>
-              <Link href="/planes" className="block hover:text-green-800">
-                Planes
-              </Link>
-              <Link href="/demo" className="block hover:text-green-800">
-                Demo
-              </Link>
+              {navigationLinks.map((link) => (
+                <Link key={link.href} href={link.href} className="block hover:text-green-800">
+                  {link.label}
+                </Link>
+              ))}
               {secondaryNavigationLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="block hover:text-green-800">
                   {link.label}

@@ -1,8 +1,8 @@
 export const portalUrl = "https://app.capellaops.com";
 
 export const navigationLinks = [
-  { href: "/#producto", label: "Producto" },
-  { href: "/#modulos", label: "Módulos" },
+  { href: "/producto", label: "Producto" },
+  { href: "/modulos", label: "Módulos" },
   { href: "/planes", label: "Planes" },
   { href: "/demo", label: "Demo" }
 ];
@@ -67,6 +67,139 @@ export const modules = [
 ] as const;
 
 export const flowSteps = ["Compra", "Inventario", "Venta", "Cliente", "Cobranza", "Reporte"];
+
+export const productProblems = [
+  {
+    title: "Inventario disperso",
+    description: "Stock, ajustes y movimientos repartidos en hojas separadas que vuelven lento cualquier seguimiento."
+  },
+  {
+    title: "Ventas sin trazabilidad",
+    description: "La operación comercial se registra tarde o por partes, sin una lectura clara del día ni del cierre."
+  },
+  {
+    title: "Clientes sin seguimiento",
+    description: "Las conversaciones y pendientes comerciales viven en mensajes, notas sueltas o memoria del equipo."
+  },
+  {
+    title: "Compras desconectadas",
+    description: "Las reposiciones no tienen el contexto completo del inventario, proveedores ni ritmo de salida."
+  },
+  {
+    title: "Proyectos sin control operativo",
+    description: "Tareas, entregas y responsables avanzan sin un tablero común para coordinar ejecución."
+  },
+  {
+    title: "Reportes tardíos o manuales",
+    description: "La visibilidad llega tarde porque depende de consolidar información desde varias herramientas."
+  }
+] as const;
+
+export const productBusinessFit = [
+  "Negocios con inventario que necesitan control más confiable de entradas, salidas y disponibilidad.",
+  "Empresas con ventas recurrentes que requieren claridad diaria sobre operación y desempeño.",
+  "Operaciones con varios usuarios que ya no pueden depender de mensajes o decisiones aisladas.",
+  "Equipos que necesitan más visibilidad para coordinar compras, clientes, proyectos y seguimiento.",
+  "Empresas que quieren dejar Excel y WhatsApp como centro operativo antes de escalar más."
+] as const;
+
+export const productDifferentiators = [
+  {
+    title: "Una sola fuente de verdad",
+    description: "Compras, inventario, ventas, clientes y reportes comparten el mismo criterio operativo."
+  },
+  {
+    title: "Módulos configurables",
+    description: "La plataforma crece por capas para activar solo lo que la operación realmente necesita."
+  },
+  {
+    title: "Usuarios y roles",
+    description: "Cada equipo trabaja con permisos y responsabilidades visibles dentro del mismo sistema."
+  },
+  {
+    title: "Reportes para decidir",
+    description: "La operación deja señal utilizable para detectar pendientes, ritmo comercial y puntos de fricción."
+  },
+  {
+    title: "Escalable por plan",
+    description: "La propuesta comercial permite empezar simple y ampliar cobertura conforme crece el negocio."
+  }
+] as const;
+
+export const moduleCatalog = [
+  {
+    title: "Inventario",
+    status: "Control central",
+    description: "Controla el stock con movimientos auditables y visibilidad real por sucursal o frente operativo.",
+    bullets: ["Entradas, salidas y ajustes", "Kardex y movimientos", "Alertas de stock"]
+  },
+  {
+    title: "POS / Ventas",
+    status: "Operación comercial",
+    description: "Registra ventas con relación directa a inventario, productos y contexto de cliente.",
+    bullets: ["Registro de ventas", "Productos y ventas ilimitados", "Relación con clientes e inventario"]
+  },
+  {
+    title: "CRM",
+    status: "Seguimiento comercial",
+    description: "Centraliza clientes, oportunidades y acciones pendientes para no perder continuidad comercial.",
+    bullets: ["Seguimiento comercial", "Clientes y oportunidades", "Cobranza y seguimiento"]
+  },
+  {
+    title: "Compras",
+    status: "Abastecimiento",
+    description: "Ordena reposiciones, recepciones y control de proveedores dentro del mismo flujo operativo.",
+    bullets: ["Órdenes de compra", "Recepción de inventario", "Control de proveedores"]
+  },
+  {
+    title: "Proyectos",
+    status: "Ejecución",
+    description: "Da seguimiento a tareas, avances y entregables con mejor coordinación entre operación y cliente.",
+    bullets: ["Seguimiento operativo", "Tareas y avances", "Relación con clientes y entregas"]
+  },
+  {
+    title: "Facturación",
+    status: "Configurable",
+    description: "Se adapta a la etapa comercial del negocio y a la cobertura activada en cada plan.",
+    bullets: ["Facturación configurable", "Básico: 20 facturas al mes", "Pro: 50 facturas al mes / Total: ilimitadas"]
+  },
+  {
+    title: "Reportes",
+    status: "Visibilidad",
+    description: "Convierte la operación diaria en información útil para revisar desempeño y tomar decisiones.",
+    bullets: ["Reportes operativos", "Visibilidad por módulo", "Decisiones con datos"]
+  }
+] as const;
+
+export const modulePlans = [
+  {
+    name: "Básico",
+    items: [
+      "Inventario, alertas y kardex",
+      "Reportes básicos",
+      "Productos y ventas ilimitados",
+      "20 facturas al mes"
+    ]
+  },
+  {
+    name: "Pro",
+    items: [
+      "Todo lo del Básico",
+      "POS, clientes y compras",
+      "Reportes operativos",
+      "50 facturas al mes"
+    ]
+  },
+  {
+    name: "Total",
+    items: [
+      "Todo lo del Pro",
+      "CRM, proyectos y cobranza",
+      "Cuentas por pagar y automatizaciones",
+      "Facturas ilimitadas"
+    ]
+  }
+] as const;
 
 export const pricingPlans = [
   {
